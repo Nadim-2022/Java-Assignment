@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Greeting</h1>
+<p id="target"></p>
+<script>
+    'use strict';
+/*
+    console.log('I\'m printing to console!')
+
+    const input = prompt('What is your name?')
+    document.querySelector('#target').innerHTML='Hello, ' +input+'!';
+
+    let x= parseInt(prompt('Enter integer number 1'));
+    let y= parseInt(prompt('Enter integer number 2'));
+    let z= parseInt(prompt('Enter integer number 3'));
+    let sum = x + y + z;
+    let mult = x * y * z;
+    let avg = sum / 3;
+    document.write(sum +'<br>')
+    document.write(mult + '<br>')
+    document.write(avg +'<br>')
+
+    const name = prompt('Enter your name: ');
+    let number = (Math.floor(Math.random() * 3)+1); //Returns a random integer from 1 to 4
+    if (number == 1){
+      document.write(name + ' you are Gryffindor');
+    }
+    else if (number == 2){
+      document.write(name + ' you are Slytherin');
+    }
+    else if (number == 3){
+      document.write(name + ' you are Hufflepuff');
+    }
+    else{
+      document.write(name + ' you are Ravenclaw');
+    }
+
+    const year = prompt('Enter the year:');
+    if (year % 100 == 0 && year % 400 == 0){
+      document.write('This is a leap year');
+    }
+    else if (year % 4 == 0){
+      document.write('This is a leap Year');
+    }
+    else{
+      document.write('This is not a leap year')
+    }
+
+
+
+    const answer = confirm('Should I calculate the square root?');
+    if (answer == true){
+      let number = prompt('Enter the number:');
+      if (number < 0){
+        document.write('The square root of a negative number is not defined.');
+      }
+      else {
+        let root = Math.sqrt(number);
+        document.write(root)
+      }
+
+    }
+    else {
+      document.write('The square root is not calculated.')
+    }
+
+
+
+    const dicenumber = prompt('Number of dice to roll: ');
+    let dice = 0;
+    let i = 0;
+    while (i < dicenumber){
+      let diceroll = Math.floor((Math.random()*6)+1);
+      document.write(diceroll +'<br>');
+      dice = dice + diceroll;
+      i++
+    }
+    document.write(dice)
+
+ */
+
+     let year = parseInt(prompt("Enter the start year:"));
+            let end = parseInt(prompt("Enter the end year:"));
+            let leapYears =[]
+            let list = document.getElementById("years");
+
+            //appends only leap years to the array from the given interval
+            for (year; year <= end; year++) {
+                if (year % 4 == 0 ){
+                    leapYears.push(year);
+                }
+            }
+            //prints an unordered list to the HTML document
+    let i;
+    for (i = 0; i < leapYears.length; ++i) {
+            var li = document.createElement('li');
+            li.innerText = leapYears[i];
+            list.appendChild(li);
+            }
+</script>
+</body>
+</html>
