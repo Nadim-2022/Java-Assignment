@@ -2,137 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-<h1>Greeting</h1>
-<p id="target"></p>
-<script>
-  'use strict';
-  /*
-  // Exercise 1
-
-      console.log('I\'m printing to console!')
-  // Exercise 2
-
-      const input = prompt('What is your name?')
-      document.querySelector('#target').innerHTML='Hello, ' +input+'!';
-
-  // Exercise 3
-
-      let x= parseInt(prompt('Enter integer number 1'));
-      let y= parseInt(prompt('Enter integer number 2'));
-      let z= parseInt(prompt('Enter integer number 3'));
-      let sum = x + y + z;
-      let mult = x * y * z;
-      let avg = sum / 3;
-      document.write(sum +'<br>')
-      document.write(mult + '<br>')
-      document.write(avg +'<br>')
-
-  // Exercise 4
-
-      const name = prompt('Enter your name: ');
-      let number = (Math.floor(Math.random() * 3)+1); //Returns a random integer from 1 to 4
-      if (number == 1){
-        document.write(name + ' you are Gryffindor');
-      }
-      else if (number == 2){
-        document.write(name + ' you are Slytherin');
-      }
-      else if (number == 3){
-        document.write(name + ' you are Hufflepuff');
-      }
-      else{
-        document.write(name + ' you are Ravenclaw');
-      }
-
-  // Exercise 5
-
-      const year = prompt('Enter the year:');
-      if (year % 100 == 0 && year % 400 == 0){
-        document.write('This is a leap year');
-      }
-      else if (year % 4 == 0){
-        document.write('This is a leap Year');
-      }
-      else{
-        document.write('This is not a leap year')
-      }
-
-  // Exercise 6
-
-      const answer = confirm('Should I calculate the square root?');
-      if (answer == true){
-        let number = prompt('Enter the number:');
-        if (number < 0){
-          document.write('The square root of a negative number is not defined.');
+    <h1>Exercise 8</h1>
+    <script>
+        function concat(list) {
+            for (let i = 0; i< list.length; i++) {
+                document.write(list[i]);
+            }
         }
-        else {
-          let root = Math.sqrt(number);
-          document.write(root)
-        }
-
-      }
-      else {
-        document.write('The square root is not calculated.')
-      }
-
-  // Exercise 7
-
-      const dicenumber = prompt('Number of dice to roll: ');
-      let dice = 0;
-      let i = 0;
-      while (i < dicenumber){
-        let diceroll = Math.floor((Math.random()*6)+1);
-        document.write(diceroll +'<br>');
-        dice = dice + diceroll;
-        i++
-      }
-      document.write(dice)
-
-
-  // Exercise 9
-
-      let num = parseInt(prompt('Enter a integer number: '))
-      let isPrime = false
-      if ( num > 1){
-        for ( let i = 2; i < num; i++){
-          if ( num % i == 0){
-            isPrime = true;
-            break;
-          }
-        }
-      }
-      if (isPrime == false){
-        document.write(`${num} is a prime number`);
-      }
-      else{
-        document.write(`${num} is not a prime number`);
-      }
-
-
-   */
-  // Exercise 9
-  let num = parseInt(prompt('Number of dice to roll:'));
-  let sumdice = parseInt(prompt('Sum of eye numbers:'));
-  let probability = 0;
-  let count = 0;
-  let times = 10000;
-  for (let i = 0; i<=num;i++){
-    let sum = 0;
-    for (let e = 1; e<=num; e++){
-      let dice = (Math.floor(Math.random()*6)+1);
-      sum += dice;
-    }
-    if (sum === sumdice){
-      count+=1;
-    }
-  }
-  probability = (count/times)*100;
-  document.write(`The probability of getting ${sumdice} from ${num} dice roll is ${probability.toFixed(2)}%`);
-
-
-</script>
+        let list = ["a", "b", "c", "d"];
+        concat(list);
+    </script>
 </body>
 </html>
