@@ -9,7 +9,7 @@ function creat(array) {
 }
 
 for (let name of names) {
-  target.appendChild(creat(name))
+  target.appendChild(creat(name));
 }
 //Or this code only.
 /*
