@@ -126,6 +126,7 @@ article.addEventListener('click', () => {
   }
 });
 /*
+//To display all the image
 const modal = document.querySelector('dialog');
 article.addEventListener('click', () => {
   modal.showModal();
