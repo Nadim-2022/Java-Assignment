@@ -95,6 +95,7 @@ const picArray = [
 // add your code here
 const target = document.querySelector('#pictures');
 const article = document.createElement('article');
+
 target.appendChild(article);
 for (const pic in picArray) {
   const h2 = document.createElement('h2');
@@ -112,4 +113,36 @@ for (const pic in picArray) {
   const p = document.createElement('p');
   p.innerHTML = picArray[pic]['description'];
   article.appendChild(p);
+
 }
+const modal = document.querySelector('dialog');
+article.addEventListener('click', () => {
+  modal.showModal();
+  for (const pic in picArray) {
+    const im = document.querySelector('img');
+    im.src = picArray[pic]['image']['large'];
+    im.alt = picArray[pic]['title'];
+    modal.appendChild(im);
+  }
+});
+/*
+const modal = document.querySelector('dialog');
+article.addEventListener('click', () => {
+  modal.showModal();
+  for (const pic in picArray) {
+    const img = document.createElement('img');
+    img.src = picArray[pic]['image']['large'];
+    img.alt = picArray[pic]['title'];
+    modal.appendChild(img);
+  }
+
+});
+
+ */
+const span = document.querySelector('span');
+span.addEventListener('click', () => {
+  modal.close('animalNotChosen');
+});
+
+
+
