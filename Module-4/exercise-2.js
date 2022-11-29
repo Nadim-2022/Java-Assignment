@@ -19,8 +19,9 @@ function showinfo(data) {
     article.appendChild(ab);
     const attr = document.createAttribute('href');
     attr.value = data[danda]['show']['url'];
-    document.querySelector('a').setAttributeNode(attr);
-    const bal = document.createAttribute('target');
+    const atr  = document.querySelector('a')
+    atr.setAttributeNode(attr);
+    /*const bal = document.createAttribute('target');
     bal.value = '_blank';
     document.querySelector('a').setAttributeNode(bal);
     document.querySelector('a').innerHTML = data[danda]['show']['url'];
