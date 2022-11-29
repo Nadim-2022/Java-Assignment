@@ -19,19 +19,20 @@ function showinfo(data) {
     article.appendChild(ab);
     const attr = document.createAttribute('href');
     attr.value = data[danda]['show']['url'];
-    const atr  = document.querySelector('a')
-    atr.setAttributeNode(attr);
-    /*const bal = document.createAttribute('target');
+    ab.setAttributeNode(attr);
+    const bal = document.createAttribute('target');
     bal.value = '_blank';
-    document.querySelector('a').setAttributeNode(bal);
-    document.querySelector('a').innerHTML = data[danda]['show']['url'];
-    /*const img = document.createElement('img');
-    img.src = data[0]['show']['image']['medium'];
+    ab.setAttributeNode(bal);
+    ab.innerHTML = data[danda]['show']['url'];
+    const img = document.createElement('img');
+    img.src = data[danda]['show']['image']['medium'];
     img.alt = 'This is a image';
-    document.getElementById('target2').appendChild(img);
-    document.getElementById('target3').innerHTML = data[0]['show']['summary'];
+    article.appendChild(img);
+    const p = document.createElement('p')
+   p.innerHTML = data[danda]['show']['summary'];
+    article.appendChild(p)
 
-     */
+
   }
 
 }
