@@ -1,13 +1,6 @@
 'use strict';
-document.querySelector('form').addEventListener('submit', function (evt) {
-  evt.preventDefault();
-  const info = document.querySelector('#query').value
-  showinfo()
-})
-/*
-const form = document.getElementById('form');
-const log = document.getElementById('log');
-form.addEventListener('submit', logSubmit);
+
+
 
 fetch('https://api.tvmaze.com/search/shows?q=girls').
     then(response => response.json()).
@@ -21,7 +14,7 @@ const article = document.createElement('article');
 section.appendChild(article);
 
 
- */
+
 function showinfo(data) {
   for (const danda in data) {
     console.log(data[danda]);
